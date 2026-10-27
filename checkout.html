@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Finalizar pedido | VerdFrut</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Estilos adicionais exclusivos do checkout. -->
+  <style>
+    .checkout-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .checkout-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .checkout-card {
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+    }
+
+    .checkout-card label {
+      display: block;
+      margin-top: 12px;
+    }
+
+    .checkout-card input,
+    .checkout-card textarea {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+    }
+
+    .checkout-card button {
+      margin-top: 20px;
+      padding: 12px;
+      cursor: pointer;
+    }
+
+    .resumo-item {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    @media (max-width: 650px) {
+      .checkout-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script src="checkout.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <a href="index.html" aria-label="Voltar à VerdFrut">
+      <h1>VerdFrut</h1>
+    </a>
+    <p>Finalização do pedido</p>
+  </header>
+
+  <main class="checkout-container">
+    <h2>Finalizar compra</h2>
+
+    <div id="mensagem-checkout" role="status" aria-live="polite"></div>
+
+    <div class="checkout-grid">
+
+      <!-- Formulário de dados do cliente e entrega. -->
+      <section class="checkout-card">
+        <h3>Dados para entrega</h3>
+
+        <form id="form-checkout">
+          <label for="nome">Nome completo</label>
+          <input
+            id="nome"
+            name="nome"
+            type="text"
+            autocomplete="name"
+            required
+            minlength="3"
+          >
+
+          <label for="email">E-mail</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+          >
+
+          <label for="telefone">Telefone</label>
+          <input
+            id="telefone"
+            name="telefone"
+            type="tel"
+            autocomplete="tel"
+            required
+          >
+
+          <label for="cep">CEP</label>
+          <input
+            id="cep"
+            name="cep"
+            type="text"
+            autocomplete="postal-code"
+            required
+          >
+
+          <label for="endereco">Rua e endereço</label>
+          <input
+            id="endereco"
+            name="endereco"
+            type="text"
+            autocomplete="street-address"
+            required
+          >
+
+          <label for="numero">Número</label>
+          <input
+            id="numero"
+            name="numero"
+            type="text"
+            required
+          >
+
+          <label for="complemento">Complemento (opcional)</label>
+          <input
+            id="complemento"
+            name="complemento"
+            type="text"
+            autocomplete="address-line2"
+          >
+
+          <label for="bairro">Bairro</label>
+          <input
+            id="bairro"
+            name="bairro"
+            type="text"
+            required
+          >
+
+          <label for="cidade">Cidade</label>
+          <input
+            id="cidade"
+            name="cidade"
+            type="text"
+            autocomplete="address-level2"
+            required
+          >
+
+          <label for="pagamento">Forma de pagamento</label>
+          <select id="pagamento" name="pagamento" required>
+            <option value="">Selecione</option>
+            <option value="pix">Pix (simulação)</option>
+            <option value="cartao">Cartão (simulação)</option>
+            <option value="dinheiro">Dinheiro na entrega (simulação)</option>
+          </select>
+
+          <button type="submit">Confirmar pedido</button>
+        </form>
+      </section>
+
+      <!-- Resumo dos produtos e dos valores. -->
+      <section class="checkout-card">
+        <h3>Resumo da compra</h3>
+
+        <div id="resumo-produtos"></div>
+
+        <hr>
+
+        <p>Subtotal: <strong id="checkout-subtotal">R$ 0,00</strong></p>
+        <p>Entrega: <strong id="checkout-entrega">R$ 0,00</strong></p>
+        <p>Total: <strong id="checkout-total">R$ 0,00</strong></p>
+        <p>Cashback estimado: <strong id="checkout-cashback">R$ 0,00</strong></p>
+
+        <a href="index.html">Voltar à loja</a>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>VerdFrut · Projeto experimental de faculdade</p>
+  </footer>
+</body>
+</html>

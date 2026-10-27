@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VerdFrut | Hortimercado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <p class="promo-banner">Use o cupom <strong>VERDEESTREIA</strong> e ganhe <strong>frete grátis</strong></p>
+
+  <header class="main-header">
+    <a href="#" aria-label="VerdFrut - página inicial" class="logo-link">
+      <img src="imagens/logo-verdfrut.png" alt="VerdFrut Hortimercado" width="220" class="logo-img">
+    </a>
+    <h1 class="sr-only">VerdFrut</h1>
+    <nav class="header-nav">
+      <a href="#" class="nav-link active">Início</a>
+      <a href="#" class="nav-link">Promoções</a>
+      <a href="#" class="nav-link">Pedidos</a>
+      <a href="#" class="nav-link">Entrar/Cadastrar</a>
+    </nav>
+  </header>
+
+  <section class="hero-banner">
+    <img src="imagens/banner-ofertas.png" alt="Ofertas da semana" class="banner-img">
+  </section>
+
+  <main class="container">
+
+    <nav class="category-nav">
+      <a href="#" class="category-link active">Todas as categorias</a>
+      <a href="#" class="category-link">Ofertas</a>
+      <a href="#" class="category-link">Hortifruti</a>
+      <a href="#" class="category-link">Mercearia</a>
+      <a href="#" class="category-link">Laticínios</a>
+      <a href="#" class="category-link">Bebidas</a>
+      <a href="#" class="category-link">Açougue</a>
+    </nav>
+
+    <div class="search-bar">
+      <button type="button" class="btn-secondary">Ver tudo</button>
+      <label class="search-label">
+        Buscar produto
+        <input type="search" placeholder="Busque por um produto" class="search-input">
+      </label>
+    </div>
+
+    <h2 class="section-title">Destaques</h2>
+
+    <section class="products-grid">
+      <article class="produto" data-id="brocolis">
+        <img src="imagens/brocolis.png" alt="Brócolis" class="product-img">
+        <strong class="tag-promo">Oferta</strong>
+        <h3 class="product-title">Brócolis</h3>
+        <p class="product-unit">unidade</p>
+        <p class="product-price">R$ 9,98</p>
+        <button type="button" class="btn-add">Adicionar</button>
+      </article>
+
+      <article class="produto" data-id="abacate">
+        <img src="imagens/abacate.png" alt="Abacate" class="product-img">
+        <strong class="tag-new">Novidade</strong>
+        <h3 class="product-title">Abacate</h3>
+        <p class="product-unit">kg</p>
+        <p class="product-price">R$ 4,48</p>
+        <button type="button" class="btn-add">Adicionar</button>
+      </article>
+
+      <article class="produto" data-id="banana-prata">
+        <img src="imagens/banana-prata.png" alt="Banana prata" class="product-img">
+        <h3 class="product-title">Banana prata</h3>
+        <p class="product-unit">kg</p>
+        <p class="product-price">R$ 3,48</p>
+        <button type="button" class="btn-add">Adicionar</button>
+      </article>
+
+      <article class="produto" data-id="macaxeira">
+        <img src="imagens/macaxeira.png" alt="Macaxeira" class="product-img">
+        <h3 class="product-title">Macaxeira</h3>
+        <p class="product-unit">kg</p>
+        <p class="product-price">R$ 3,48</p>
+        <button type="button" class="btn-add">Adicionar</button>
+      </article>
+
+      <article class="produto" data-id="cenoura">
+        <img src="imagens/cenoura.png" alt="Cenoura" class="product-img">
+        <h3 class="product-title">Cenoura</h3>
+        <p class="product-unit">kg</p>
+        <p class="product-price">R$ 5,98</p>
+        <button type="button" class="btn-add">Adicionar</button>
+      </article>
+
+      <article class="produto" data-id="jerimum-leite">
+        <img src="imagens/jerimum-leite.png" alt="Jerimum leite" class="product-img">
+        <h3 class="product-title">Jerimum leite</h3>
+        <p class="product-unit">kg</p>
+        <p class="product-price">R$ 2,78</p>
+        <button type="button" class="btn-add">Adicionar</button>
+      </article>
+
+      <article class="produto" data-id="uva-verde">
+        <img src="imagens/uva-verde.png" alt="Uva verde" class="product-img">
+        <h3 class="product-title">Uva verde</h3>
+        <p class="product-unit">bandeja</p>
+        <p class="product-price">R$ 5,98</p>
+        <button type="button" class="btn-add">Adicionar</button>
+      </article>
+
+      <article class="produto" data-id="morango">
+        <img src="imagens/morango.png" alt="Morango" class="product-img">
+        <h3 class="product-title">Morango</h3>
+        <p class="product-unit">bandeja</p>
+        <p class="product-price">R$ 7,98</p>
+        <button type="button" class="btn-add">Adicionar</button>
+      </article>
+    </section>
+
+    <aside class="sidebar">
+      <section class="club-card">
+        <h2 class="club-title">Clube VerdMais · Cashback</h2>
+        <p class="club-text">Receba <strong>3% de cashback</strong> em cada pedido e use o saldo como desconto nas próximas compras.</p>
+        <a href="#" class="btn-club">Crie ou acesse sua conta</a>
+      </section>
+
+      <section id="sacola" class="cart-container">
+        <h2 class="cart-title">Sua sacola</h2>
+
+        <div id="itens-carrinho" class="cart-items">
+          <p class="empty-msg">Sacola vazia</p>
+        </div>
+
+        <form id="form-cupom" class="coupon-form">
+          <label for="cupom" class="coupon-label">Código do cupom</label>
+          <input type="text" id="cupom" placeholder="Tem um cupom? Insira o código" class="coupon-input">
+          <button type="submit" class="btn-apply">Aplicar</button>
+          <p id="mensagem-cupom" aria-live="polite" class="coupon-msg"></p>
+        </form>
+
+        <dl class="cart-totals">
+          <dt>Subtotal</dt>
+          <dd id="subtotal">R$ 0,00</dd>
+
+          <dt>Entrega</dt>
+          <dd id="entrega">R$ 0,00</dd>
+
+          <dt class="total-label">Total</dt>
+          <dd id="total" class="total-value">R$ 0,00</dd>
+
+          <dt class="cashback-label">Cashback estimado (3%)</dt>
+          <dd id="cashback" class="cashback-value">R$ 0,00</dd>
+        </dl>
+
+        <button type="button" id="finalizar-pedido" class="btn-checkout" disabled>
+          Finalizar pedido
+        </button>
+      </section>
+    </aside>
+
+  </main>
+
+  <footer class="main-footer">
+    <p>VerdFrut · Hortimercado · Projeto experimental de faculdade</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
